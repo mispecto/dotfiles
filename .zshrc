@@ -112,7 +112,15 @@ export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 setopt EXTENDED_HISTORY
 
-# brew install openjdk@21
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
+OPENJDK_VER=21
+LLVM_VER=20
+
+export PATH="$HOME/.cargo/bin:/opt/homebrew/opt/openjdk@$OPENJDK_VER/bin:/opt/homebrew/opt/llvm@$LLVM_VER/bin:$PATH"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@$OPENJDK_VER"
+
+export LDFLAGS="-L/opt/homebrew/opt/llvm@$LLVM_VER/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm@$LLVM_VER/include"
+export CMAKE_PREFIX_PATH="/opt/homebrew/opt/llvm@$LLVM_VER"
+
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
