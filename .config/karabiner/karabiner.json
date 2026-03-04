@@ -2,7 +2,7 @@
   "profiles": [{
     "complex_modifications": {
       "rules": [{
-          "description": "Terminal copy uses Ctrl+Shift+C (HP External Keyboard)",
+          "description": "Windows-style shortcuts in terminals (HP External Keyboard)",
           "manipulators": [{
             "conditions": [{
                 "identifiers": [{
@@ -206,12 +206,21 @@
             },
             {
               "conditions": [{
-                "identifiers": [{
-                  "product_id": 28234,
-                  "vendor_id": 1008
-                }],
-                "type": "device_if"
-              }],
+                  "identifiers": [{
+                    "product_id": 28234,
+                    "vendor_id": 1008
+                  }],
+                  "type": "device_if"
+                },
+                {
+                  "bundle_identifiers": [
+                    "^net\\.kovidgoyal\\.kitty$",
+                    "^com\\.apple\\.Terminal$",
+                    "^com\\.googlecode\\.iterm2$"
+                  ],
+                  "type": "frontmost_application_unless"
+                }
+              ],
               "from": {
                 "key_code": "w",
                 "modifiers": {
@@ -261,6 +270,135 @@
               "to": [{
                 "key_code": "z",
                 "modifiers": ["command", "shift"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "f",
+                "modifiers": {
+                  "mandatory": ["control"]
+                }
+              },
+              "to": [{
+                "key_code": "f",
+                "modifiers": ["command"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "f",
+                "modifiers": {
+                  "mandatory": ["control", "shift"]
+                }
+              },
+              "to": [{
+                "key_code": "f",
+                "modifiers": ["command", "shift"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "h",
+                "modifiers": {
+                  "mandatory": ["control"]
+                }
+              },
+              "to": [{
+                "key_code": "h",
+                "modifiers": ["command"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "h",
+                "modifiers": {
+                  "mandatory": ["control", "shift"]
+                }
+              },
+              "to": [{
+                "key_code": "h",
+                "modifiers": ["command", "shift"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "s",
+                "modifiers": {
+                  "mandatory": ["control"]
+                }
+              },
+              "to": [{
+                "key_code": "s",
+                "modifiers": ["command"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                  "identifiers": [{
+                    "product_id": 28234,
+                    "vendor_id": 1008
+                  }],
+                  "type": "device_if"
+                },
+                {
+                  "bundle_identifiers": [
+                    "^net\\.kovidgoyal\\.kitty$",
+                    "^com\\.apple\\.Terminal$",
+                    "^com\\.googlecode\\.iterm2$"
+                  ],
+                  "type": "frontmost_application_unless"
+                }
+              ],
+              "from": {
+                "key_code": "r",
+                "modifiers": {
+                  "mandatory": ["control"]
+                }
+              },
+              "to": [{
+                "key_code": "r",
+                "modifiers": ["command"]
               }],
               "type": "basic"
             }
