@@ -86,12 +86,21 @@
             },
             {
               "conditions": [{
-                "identifiers": [{
-                  "product_id": 28234,
-                  "vendor_id": 1008
-                }],
-                "type": "device_if"
-              }],
+                  "identifiers": [{
+                    "product_id": 28234,
+                    "vendor_id": 1008
+                  }],
+                  "type": "device_if"
+                },
+                {
+                  "bundle_identifiers": [
+                    "^net\\.kovidgoyal\\.kitty$",
+                    "^com\\.apple\\.Terminal$",
+                    "^com\\.googlecode\\.iterm2$"
+                  ],
+                  "type": "frontmost_application_unless"
+                }
+              ],
               "from": {
                 "key_code": "a",
                 "modifiers": {
