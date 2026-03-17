@@ -115,7 +115,7 @@ setopt EXTENDED_HISTORY
 OPENJDK_VER=21
 LLVM_VER=20
 
-export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:$PATH:/opt/homebrew/opt/openjdk@$OPENJDK_VER/bin:/opt/homebrew/opt/llvm@$LLVM_VER/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:/opt/homebrew/bin:/opt/homebrew/opt/openjdk@$OPENJDK_VER/bin:/opt/homebrew/opt/llvm@$LLVM_VER/bin:$PATH"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@$OPENJDK_VER"
 
 export LDFLAGS="-L/opt/homebrew/opt/llvm@$LLVM_VER/lib"
