@@ -410,6 +410,40 @@
                 "modifiers": ["command"]
               }],
               "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "home"
+              },
+              "to": [{
+                "key_code": "left_arrow",
+                "modifiers": ["left_command"]
+              }],
+              "type": "basic"
+            },
+            {
+              "conditions": [{
+                "identifiers": [{
+                  "product_id": 28234,
+                  "vendor_id": 1008
+                }],
+                "type": "device_if"
+              }],
+              "from": {
+                "key_code": "end"
+              },
+              "to": [{
+                "key_code": "right_arrow",
+                "modifiers": ["left_command"]
+              }],
+              "type": "basic"
             }
           ]
         }
