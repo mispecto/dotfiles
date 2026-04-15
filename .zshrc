@@ -123,4 +123,3 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm@$LLVM_VER/include"
 export CMAKE_PREFIX_PATH="/opt/homebrew/opt/llvm@$LLVM_VER"
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
-
